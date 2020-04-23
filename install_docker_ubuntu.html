@@ -1,0 +1,19 @@
+#below command helps to install cocker in ubuntu 18.4 system
+
+$apt update
+
+$apt install apt-transport-https ca-certificates curl software-properties-common   #install a few prerequisite packages
+
+$curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -    #add the GPG key for the official Docker repository to our system
+
+$add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"  #Add the Docker repository to APT sources:
+
+$apt update
+
+$apt-cache policy docker-ce   #Make sure you are about to install from the Docker repo instead of the default Ubuntu repo:
+
+$apt install docker-ce  # install Docker:
+
+$systemctl status docker  
+
+Done !!! 
