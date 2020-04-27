@@ -1,1 +1,35 @@
 $docker run hello-world
+$docker ps  #list all the running containers 
+$docker ps --all  #list all the created continers on our system
+#docker run == docker create + docker start
+$docker creating <container name>     #creating the file system
+$docker start <container ID>       #starting the process
+
+example: 
+$docker create ping google.com
+docker start <CTID>   #a container will start and run ping google.com without any intrept
+
+Restarting a container:
+-----------------------
+#When we $run docker ps --all  #we will get all the container history. 
+#Then we can run any container with its ID.
+$docker start -a <container ID>   #-a disaply the details in the container. If we do not use -a we will got get the details.  
+
+
+Removing stopped continers:
+-------------------------
+
+$docker system prune #remove all stopped containers, all network not used by at least one container, all dangling images, and all build cache
+
+Retrieving Log Outputs
+---------------------
+$docker logs <containerID>  #list all the logs on the container
+
+Stopping Container
+-----------------
+docker ps --all   #list all the continers (we will get CTID from this command)
+#docker stop <container id> #H/W signal (SIGTERM is the signal command)  send to process inside that container
+docker kill <container ID>  #sent (SIGKILL signal) terminating signal to the process inside the container
+
+
+
