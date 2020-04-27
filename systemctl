@@ -1,0 +1,5 @@
+:w!$docker run hello-world   #Docker server will check the image called hello-world present inside the local image cache, if not present it will check the docker hub and take that image to our local system.
+$docker run -it ubuntu bash  #download ubuntu bash image to our system and run the same.
+
+
+
